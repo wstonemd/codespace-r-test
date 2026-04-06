@@ -1,6 +1,11 @@
 {
   "name": "R + RStudio Server",
   "image": "ghcr.io/rocker-org/devcontainer/tidyverse:4.4",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
   "forwardPorts": [8787],
   "portsAttributes": {
     "8787": {
@@ -8,6 +13,7 @@
       "onAutoForward": "openBrowser"
     }
   },
+  "postStartCommand": "sudo rstudio-server start",
   "remoteEnv": {
     "DISABLE_AUTH": "true"
   }
