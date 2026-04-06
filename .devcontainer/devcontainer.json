@@ -1,0 +1,14 @@
+{
+  "name": "R + RStudio Server",
+  "image": "ghcr.io/rocker-org/devcontainer/tidyverse:4.4",
+  "forwardPorts": [8787],
+  "portsAttributes": {
+    "8787": {
+      "label": "RStudio Server",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "remoteEnv": {
+    "DISABLE_AUTH": "true"
+  }
+}
